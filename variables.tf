@@ -15,7 +15,12 @@ variable "container_memory" {
 
 variable "container_memory_reservation" {
   description = "The amount of memory (in MiB) to reserve for the container. If container needs to exceed this threshold, it can do so up to the set container_memory hard limit"
-  default     = 128
+  default     = 256
+}
+
+variable "network_mode" {
+  description = "The network mode for the container"
+  default = "awsvpc"
 }
 
 variable "port_mappings" {
